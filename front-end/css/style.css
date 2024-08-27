@@ -1,4 +1,27 @@
 body{
     width: 100%;
     background-color: #000DFF;
+    
+    
 }
+
+
+
+
+
+.mb-3{  
+ width: 20%; 
+ height: 20%;
+ justify-content: center;
+ margin-left: 40%;
+
+}    
+
+label{
+ align-items: center;
+ padding: 20%;
+ margin-left: 50%;
+}
+   
+
+
