@@ -1,15 +1,36 @@
 body{
     width: 100%;
-    background-color: #000DFF;
+    background-color: white;
+    display: flex;
+    margin: 0;
+    padding: 0;
     
+
+}
+.containe_lon_in{
+    border: 1px solid green;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form{
     
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.containe_logo{
+    border: pink, solid 1px;
+    background-image: linear-gradient(to right, #006BF6, #1A237E);
+    width: 50%;
+    text-align: center;
 }
 
 
 
 
-
-.mb-3{  
+/* .mb-3{  
  width: 20%; 
  height: 20%;
  justify-content: center;
