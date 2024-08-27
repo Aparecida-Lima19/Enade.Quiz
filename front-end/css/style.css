@@ -1,6 +1,16 @@
+:root {
+    --primary-color: #006BF6;
+    --secondary-color: #1A237E;
+    --background-color: #FFFF;
+    --text-color: #FFFF;
+    --secondary-text-color: #000;
+    
+}
+
+
 body {
     width: 100%;
-    background-color: white;
+    background-color: var(--background-color);
     display: flex;
     margin: 0;
     padding: 0;
@@ -22,7 +32,7 @@ form {
 
 .containe_logo {
    
-    background-image: linear-gradient(to right, #006BF6, #1A237E);
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     width: 100%;
     text-align: center;
     height: 100vh; 
