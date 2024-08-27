@@ -1,48 +1,48 @@
-body{
+body {
     width: 100%;
     background-color: white;
     display: flex;
     margin: 0;
     padding: 0;
-    
-
 }
-.containe_lon_in{
+
+.containe_lon_in {
     border: 1px solid green;
     width: 100%;
     padding: 20px;
+    margin-top: 10%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-form{
-    
+
+form {
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
-.containe_logo{
-    border: pink, solid 1px;
+
+.containe_logo {
+   
     background-image: linear-gradient(to right, #006BF6, #1A237E);
-    width: 50%;
+    width: 100%;
     text-align: center;
+    height: 100vh; 
 }
 
-
-
-
-/* .mb-3{  
- width: 20%; 
+.mb-3{  
+ width: 40%; 
  height: 20%;
  justify-content: center;
- margin-left: 40%;
+ margin-left: 20%;
 
 }    
 
-label{
- align-items: center;
- padding: 20%;
- margin-left: 50%;
+.Logo{
+
+margin-top: 20%;
+
 }
+
+
    
 
 
