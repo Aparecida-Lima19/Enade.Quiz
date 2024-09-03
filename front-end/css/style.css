@@ -30,6 +30,9 @@
   box-sizing: border-box;
 }
 
+
+
+
 body,
 input {
   font-family: "Poppins", sans-serif;
@@ -42,6 +45,9 @@ input {
   min-height: 100vh;
   overflow: hidden;
 }
+
+
+
 
 .forms-container {
   position: absolute;

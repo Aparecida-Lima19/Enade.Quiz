@@ -8,7 +8,8 @@ sign_up_btn.addEventListener("click", () => {
 
 sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
-});
+})
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const signInForm = document.querySelector('.sign-in-form');
