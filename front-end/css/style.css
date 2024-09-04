@@ -47,8 +47,6 @@ input {
 }
 
 
-
-
 .forms-container {
   position: absolute;
   width: 100%;
@@ -201,25 +199,60 @@ form.sign-in-form {
 
 
 /* Escondendo a tela de "Esqueci a Senha" inicialmente */
+
 .forgot-password-container {
-  position: fixed; /* Corrigido para fixed para garantir que a tela cubra toda a viewport */
-  top: 0;
-  left: 0;
+  /*Essa é aparte onde inicia a tela de esqueci senha*/
+  position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.95); /* Leve transparência para diferenciar da tela principal */
+  background: #ffffff;
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 10;
+ 
 }
 
 .forgot-password-panel {
-  background: #f3f4f7;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 100%;
   text-align: center;
+  border: 1px solid ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+}
+#content-superio{
+margin: 5%;
+  width: 100%;
+}
+#content-infSenha{
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.img-senha{
+  width: 40%;
+  padding: 5%;
+}
+
+#back-to-login-btn{
+  background: #FFF;
+  border: 0;
 }
 
 .forgot-password-panel .input-field {
@@ -229,6 +262,20 @@ form.sign-in-form {
 .forgot-password-panel .btn {
   margin-top: 1rem;
 }
+.font-senha{
+  text-align: center;
+  text-shadow: var(--sombra-shadow);
+  font-size: 40px;
+  padding: 2%;
+}
+.font-subSenha{
+  text-align: center;
+  text-shadow: var(--sombra-shadow);
+  font-family: var(--font-secondary);
+  font-size: 16px;
+}
+
+/*fim da tela esqueci senha*/
 
 
 .seletor::after {
