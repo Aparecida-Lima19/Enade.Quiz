@@ -2,6 +2,22 @@ const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 
+// elementos esqueci senha
+const forgotPasswordLink = document.querySelector('.forgot-password-link');
+const forgotPasswordContainer = document.getElementById('forgot-password-container');
+const backToLoginBtn = document.getElementById('back-to-login-btn');
+
+// Mostrar a tela de "Esqueci a Senha"
+forgotPasswordLink.addEventListener('click', () => {
+    forgotPasswordContainer.style.display = 'flex';
+});
+
+// Voltar para a tela de login
+backToLoginBtn.addEventListener('click', () => {
+    forgotPasswordContainer.style.display = 'none';
+});
+
+
 sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
 });
@@ -9,6 +25,50 @@ sign_up_btn.addEventListener("click", () => {
 sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 })
+
+
+// Adicionando a funcionalidade de "Esqueci a Senha"
+document.addEventListener('DOMContentLoaded', () => {
+  const forgotPasswordForm = document.querySelector('.forgot-password-form');
+
+  forgotPasswordForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const emailInput = forgotPasswordForm.querySelector('input[type="email"]');
+    
+    if (!emailInput.value) {
+      alert('Por favor, insira seu email.');
+      return;
+    }
+
+    //requisição para esqueci senha
+      try {
+      const response = await fetch('http://localhost:8080/api/auth/forgot-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: emailInput.value
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Erro ao solicitar a recuperação de senha.');
+      }
+
+      const data = await response.json();
+      console.log('Forgot Password Response:', data);
+      alert('Se o email estiver registrado, você receberá instruções para redefinir sua senha.');
+
+      // Redirecionar para a página de login após o envio do email
+      forgotPasswordContainer.style.display = 'none';
+    } catch (error) {
+      console.error('Erro ao solicitar recuperação de senha:', error);
+      alert('Falha ao solicitar recuperação de senha. Tente novamente.');
+    }
+  });
+});
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Requisição para login
     try {
-      const loginResponse = await fetch('http://localhost:8081/api/auth/login', {
+      const loginResponse = await fetch('http://localhost:8080/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -94,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Requisição para cadastro
     try {
-      const registerResponse = await fetch('http://localhost:8081/api/auth/register', {
+      const registerResponse = await fetch('http://localhost:8080/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
