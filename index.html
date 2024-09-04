@@ -16,7 +16,7 @@
         <div class="signin-signup">
 
           <!--Formulário de login-->
-          <form id="loginForm" action="http://localhost:8081/api/auth/login" method="post" class="sign-in-form">
+          <form id="loginForm" action="http://localhost:8080/api/auth/login" method="post" class="sign-in-form">
 
             <div class="tilte-logo">
               <h2 class="title">ENADE.</h2>
@@ -31,12 +31,12 @@
               <input type="password" id="loginPassword" placeholder="Password" required />
             </div>
             <input type="submit" value="Login" class="btn solid" />
-            <a href="#" class="forgot-password-link">Esqueci senha</a>
+            <a href="#" class="forgot-password-link">Esqueceu a Senha?</a>
              <img src="assets/img/Logo.png" alt="nassau" class="imgLogo">
           </form>
 
           <!--Forms de cadastro-->
-          <form id="registerForm" action="http://localhost:8081/api/auth/register" method="post" class="sign-up-form">
+          <form id="registerForm" action="http://localhost:8080/api/auth/register" method="post" class="sign-up-form">
             
             <div class="tilte-logo">
               <h2 class="title">ENADE.</h2>
@@ -167,6 +167,19 @@
         </div>
 
         <!-- Tela de Esqueci a Senha -->
+
+         
+       <div class="forgot-password-container" id="forgot-password-container">
+       <div class="forgot-password-panel">
+       <div class="content">
+       <h3>Recuperar Senha</h3>
+       <p>Insira seu email para receber um link de recuperação de senha.</p>
+
+       <form id="forgotPasswordForm" action="http://localhost:8080/api/auth/forgot-password" method="POST"></form>
+       <div class="input-field">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="forgotPasswordEmail" placeholder="Email" required />
+
         <div class="forgot-password-container" id="forgot-password-container">
           <div class="forgot-password-panel">
             <div id="content-superio">
@@ -190,6 +203,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
