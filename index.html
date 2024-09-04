@@ -15,9 +15,8 @@
       <div class="forms-container">
         <div class="signin-signup">
 
-          <!--Formulário de login-->
+          <!-- Formulário de login -->
           <form id="loginForm" action="http://localhost:8080/api/auth/login" method="post" class="sign-in-form">
-
             <div class="tilte-logo">
               <h2 class="title">ENADE.</h2>
               <h4 class="sub-title">Quiz</h4>
@@ -32,12 +31,11 @@
             </div>
             <input type="submit" value="Login" class="btn solid" />
             <a href="#" class="forgot-password-link">Esqueceu a Senha?</a>
-             <img src="assets/img/Logo.png" alt="nassau" class="imgLogo">
+            <img src="assets/img/Logo.png" alt="nassau" class="imgLogo">
           </form>
 
-          <!--Forms de cadastro-->
+          <!-- Formulário de cadastro -->
           <form id="registerForm" action="http://localhost:8080/api/auth/register" method="post" class="sign-up-form">
-            
             <div class="tilte-logo">
               <h2 class="title">ENADE.</h2>
               <h4 class="sub-title">Quiz</h4>
@@ -45,17 +43,14 @@
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input type="text" id="registerUsername" placeholder="Username" maxlength="20" required />
-              <small class="error-message" id="usernameError"></small>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
               <input type="email" id="registerEmail" placeholder="Email" maxlength="50" required />
-              <small class="error-message" id="emailError"></small>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
               <input type="password" id="registerPassword" placeholder="Password" maxlength="120" required />
-              <small class="error-message" id="passwordError"></small>
             </div>
             <div class="input-field">
               <i class="fas fa-caret-down"></i>
@@ -135,79 +130,48 @@
           </form>
         </div>
       </div>
-      
-      <!--Tela de Login-->
+
+      <!-- Tela de Login -->
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
             <h3>Primeira vez aqui?</h3>
-            <p>
-              Crie sua conta e descubra tudo o que temos para você!
-            </p>
-            <button class="btn transparent" id="sign-up-btn">
-              Criar conta
-            </button>
+            <p>Crie sua conta e descubra tudo o que temos para você!</p>
+            <button class="btn transparent" id="sign-up-btn">Criar conta</button>
           </div>
           <img src="assets/img/Mask group.png" class="image" alt="" />
         </div>
 
-        <!--Tela de Cadastro-->
+        <!-- Tela de Cadastro -->
         <div class="panel right-panel">
           <div class="content">
             <h3>Já tem cadastro?</h3>
-            <p>
-              Se você já é nosso usuário, não precisa se cadastrar novamente. Clique aqui para fazer login e retomar de onde parou.
-            </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Login
-            </button>
+            <p>Se você já é nosso usuário, clique aqui para fazer login.</p>
+            <button class="btn transparent" id="sign-in-btn">Login</button>
           </div>
           <img src="assets/img/Mask group (1).png" class="image" alt="" />
-          
         </div>
 
         <!-- Tela de Esqueci a Senha -->
-
-         
-       <div class="forgot-password-container" id="forgot-password-container">
-       <div class="forgot-password-panel">
-       <div class="content">
-       <h3>Recuperar Senha</h3>
-       <p>Insira seu email para receber um link de recuperação de senha.</p>
-
-       <form id="forgotPasswordForm" action="http://localhost:8080/api/auth/forgot-password" method="POST"></form>
-       <div class="input-field">
-        <i class="fas fa-envelope"></i>
-        <input type="email" id="forgotPasswordEmail" placeholder="Email" required />
-
         <div class="forgot-password-container" id="forgot-password-container">
           <div class="forgot-password-panel">
-            <div id="content-superio">
-              <h3 class="font-senha">Recuperar Senha</h3>
-            
-              <p class="font-subSenha">Insira seu email para receber um link de recuperação de senha.</p>
-            </div>
-            <div id="content-infSenha">
-              <div class="input-field">
-                <i class="fas fa-envelope"></i>
-                <input
-                  type="email"
-                  id="forgotPasswordEmail"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-              <button class="btn solid" id="send-email-btn">Enviar</button>
-              <button class="btns" id="back-to-login-btn">Voltar</button>
+            <div class="content">
+              <h3>Recuperar Senha</h3>
+              <p>Insira seu email para receber um link de recuperação de senha.</p>
+              <form id="forgotPasswordForm" action="http://localhost:8080/api/auth/forgot-password" method="POST">
+                <div class="input-field">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="forgotPasswordEmail" name="email" placeholder="Email" required />
+                </div>
+                <button type="submit" class="btn solid" id="send-email-btn">Enviar</button>
+              </form>
+              <button class="btn transparent" id="back-to-login-btn">Voltar</button>
               <img src="assets/img/Logo.png" alt="nassau" class="imgLogo">
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
-  
 
     <script src="app.js"></script>
   </body>
