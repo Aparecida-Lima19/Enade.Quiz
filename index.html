@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
         <div class="signin-signup">
 
           <!-- Formulário de login -->
-          <form id="loginForm" action="http://localhost:8080/api/auth/login" method="post" class="sign-in-form">
+          <form id="loginForm" class="sign-in-form">
             <div class="tilte-logo">
               <h2 class="title">ENADE.</h2>
               <h4 class="sub-title">Quiz</h4>
@@ -30,12 +30,12 @@
               <input type="password" id="loginPassword" placeholder="Password" required />
             </div>
             <input type="submit" value="Login" class="btn solid" />
-            <a href="#" class="forgot-password-link">Esqueceu a Senha?</a>
+            <a href="index2.html" class="forgot-password-link">Esqueceu a Senha?</a>
             <img src="assets/img/Logo.png" alt="nassau" class="imgLogo">
           </form>
 
           <!-- Formulário de cadastro -->
-          <form id="registerForm" action="http://localhost:8080/api/auth/register" method="post" class="sign-up-form">
+          <form id="registerForm" class="sign-up-form">
             <div class="tilte-logo">
               <h2 class="title">ENADE.</h2>
               <h4 class="sub-title">Quiz</h4>
@@ -152,24 +152,7 @@
           <img src="assets/img/Mask group (1).png" class="image" alt="" />
         </div>
 
-        <!-- Tela de Esqueci a Senha -->
-        <div class="forgot-password-container" id="forgot-password-container">
-          <div class="forgot-password-panel">
-            <div class="content">
-              <h3>Recuperar Senha</h3>
-              <p>Insira seu email para receber um link de recuperação de senha.</p>
-              <form id="forgotPasswordForm" action="http://localhost:8080/api/auth/forgot-password" method="POST">
-                <div class="input-field">
-                  <i class="fas fa-envelope"></i>
-                  <input type="email" id="forgotPasswordEmail" name="email" placeholder="Email" required />
-                </div>
-                <button type="submit" class="btn solid" id="send-email-btn">Enviar</button>
-              </form>
-              <button class="btn transparent" id="back-to-login-btn">Voltar</button>
-              <img src="assets/img/Logo.png" alt="nassau" class="imgLogo">
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
 
