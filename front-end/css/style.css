@@ -203,8 +203,8 @@ form.sign-in-form {
 .forgot-password-container {
   /*Essa é aparte onde inicia a tela de esqueci senha*/
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   background: #ffffff;
   display: none;
   justify-content: center;
